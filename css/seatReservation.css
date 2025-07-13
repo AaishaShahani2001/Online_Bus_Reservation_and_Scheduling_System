@@ -1,0 +1,170 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f2f2f2;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background: #0a0a23;
+  color: #fff;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a:hover, nav a.active {
+  color: #ffcb05;
+}
+
+.reservation-form {
+    width: 50%;
+    margin-top: 100px;
+    margin-left: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: margin-top 0.5s ease-in-out;
+}
+
+.reservation-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form select, form input, form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.reservation-form [type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 28px;
+    background: #1717e3;
+    color: #eaeaea;
+    border: 1px solid #1717e3;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    transition: .5s;
+}
+
+button[type="submit"]:hover {
+    background: transparent;
+    color: #1717e3;
+}
+
+.bus-images {
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-box {
+    text-align: center;
+}
+
+.image-box img {
+    width: 150px;
+    height: 150px;
+}
+
+/* Footer */
+footer {
+  background: #0a0a23;
+  color: white;
+  margin-top: auto;
+  padding: 40px 8% 20px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-content h3 {
+  margin-bottom: 10px;
+}
+.footer-content ul {
+  list-style: none;
+}
+.footer-content ul li {
+  margin-bottom: 6px;
+}
+.footer-content ul li a {
+  color: white;
+  text-decoration: none;
+}
+.socials a {
+  margin-right: 15px;
+  font-size: 1.4rem;
+  color: white;
+  transition: 0.3s;
+}
+
+.socials  a:hover i.fa-facebook {
+    color: #1717e3;
+}
+
+.socials  a:hover i.fa-instagram {
+    color: rgb(211, 6, 160);
+}
+
+.socials a:hover i.fa-twitter {
+    color: rgb(14, 207, 241);
+}
+
+
+.footer-note {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #bbb;
+}

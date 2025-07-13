@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | TravelWheels</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        .already {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: auto;
+          height: auto;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+
+        /* Header */
+header {
+  background: #0a0a23;
+  color: #fff;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a:hover, nav a.active {
+  color: #ffcb05;
+}
+
+/* Header Signin/Signup button cleanup */
+.btn-link {
+  background: #ffcb05;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: #0a0a23;
+  text-decoration: none;
+  font-weight: 500;
+}
+.btn-link:hover {
+  background-color: hsl(48, 16%, 31%);
+}
+
+ </style>
+
+    <script>
+        function validateForm() {
+            const username = document.forms["signupForm"]["username"].value;
+            const firstName = document.forms["signupForm"]["first_name"].value;
+            const lastName = document.forms["signupForm"]["last_name"].value;
+            const password = document.forms["signupForm"]["password"].value;
+
+            let errorMessage = "";
+
+            // Validate username (not empty and must be an email)
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(username)) {
+                errorMessage += "Please enter a valid email address.<br>";
+            }
+
+            // Validate first name (not empty)
+            if (firstName === "") {
+                errorMessage += "First name is required.<br>";
+            }
+
+            // Validate last name (not empty)
+            if (lastName === "") {
+                errorMessage += "Last name is required.<br>";
+            }
+
+            // Validate password (minimum 6 characters)
+            if (password.length < 6) {
+                errorMessage += "Password must be at least 6 characters long.<br>";
+            }
+
+            // Display error messages
+            if (errorMessage !== "") {
+                document.getElementById("errorMessages").innerHTML = errorMessage;
+                return false;
+            }
+
+            return true; // Allow form submission if everything is valid
+        }
+    </script>
+</head>
+<body>
+<header class="header">
+        <div class="logo">TravelWheels</div>
+
+        <nav class="navbar">
+            <a href="homepage.html" class="active">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="support.html">Support</a>
+            <a href="signin.html" class="btn-link">Sign In</a>
+            
+        </nav>
+</header>
+
+<div class="container">
+    <h2>Sign Up</h2>
+    <form name="signupForm" method="post" action="" onsubmit="return validateForm()">
+        <label>Username (Email):</label>
+        <input type="text" name="username" required>
+        <br>
+        <label>First Name:</label>
+        <input type="text" name="first_name" required>
+        <br>
+        <label>Last Name:</label>
+        <input type="text" name="last_name" required>
+        <br>
+        <label>Password:</label>
+        <input type="password" name="password" required>
+        <br>
+        <div id="errorMessages" class="error-message"></div>
+        <input type="submit" value="Sign Up">
+    </form>
+    <p>Already have an account?</p>
+    <div class="already">
+        <a href="signin.html">Sign In</a>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bus Booking and Scheduling System</title>
+  <link rel="stylesheet" href="css/seatReservation.css" />
+  <script src="js/script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+    
+        <header class="header">
+            <div class="logo">TravelWheels</div>
+    
+            <nav class="navbar">
+                <a href="homepage.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="contactus.html">Contact Us</a>
+                <a href="support.html">Support</a>
+                
+            </nav>
+        </header>
+
+<body>
+    <main>
+        <section class="reservation-form">
+            <h2>Online Bus Seat Reservation</h2>
+            <form action="payment.php" method="POST">
+                <label for="from">From:</label>
+                <select id="from" name="from">
+                    <option value="">Select</option>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Ratnapura">Ratnapura</option>
+                    <option value="Badulla">Badulla</option>
+                    <option value="Hambanthota">Hambanthotta</option>
+                    <option value="Kegalle">Kegalle</option>
+                    <option value="Matale">Matale</option>
+                    <option value="Kandy">Kandy</option>
+                    <option value="Ampara">Ampara</option>
+                    <option value="Jaffna">Jaffna</option>
+                    <option value="Anuradhapura">Anuradhapura</option>
+                </select>
+
+                <label for="to">To:</label>
+                <select id="to" name="to">
+                    <option value="">Select</option>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Ratnapura">Ratnapura</option>
+                    <option value="Badulla">Badulla</option>
+                    <option value="Hambanthota">Hambanthotta</option>
+                    <option value="Kegalle">Kegalle</option>
+                    <option value="Matale">Matale</option>
+                    <option value="Kandy">Kandy</option>
+                    <option value="Ampara">Ampara</option>
+                    <option value="Jaffna">Jaffna</option>
+                    <option value="Anuradhapura">Anuradhapura</option>
+
+                </select>
+
+                <label for="journey-date">Journey Date:</label>
+                <input type="date" id="journey-date" name="journey-date" required> 
+
+                <label for="find-buses">Find Buses:</label>
+                <select id="find-buses" name="find-buses">
+                    <option value="">Select</option>
+                    <option value="0111">0111</option>
+                    <option value="0112">0112</option>
+                    <option value="0113">0113</option>
+                    <option value="0114">0114</option>
+                    <option value="0115">0115</option>
+                    <option value="0116">0116</option>
+                    <option value="0117">0117</option>
+                    <option value="0118">0118</option>
+                    <option value="0119">0119</option>
+                </select>
+
+                <button type="submit">Search Buses</button>
+            </form>
+        </section>
+
+        <section class="bus-images">
+            <h3>Bus Options</h3>
+            <div class="image-grid">
+                <div class="image-box">
+                    <img src="images/BusImage1.jpg" alt="Image 1">
+                    <p>Your Safety</p>
+                </div>
+                <div class="image-box">
+                    <img src="images/BusImage2.jpg" alt="Image 2">
+                    <p>is our</p>
+                </div>
+                <div class="image-box">
+                    <img src="images/BusImage3.jpg" alt="Image 3">
+                    <p>concern</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+          <li><a href="#">Policy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect With Us</h3>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-note">&copy; 2025 TravelWheels | All rights reserved</p>
+  </footer>
+
+</body>
+</html>
