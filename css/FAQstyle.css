@@ -6,6 +6,33 @@ body {
   color: #333;
 }
 
+/* Header */
+header {
+  background: #0a0a23;
+  color: #fff;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a:hover, nav a.active {
+  color: #ffcb05;
+}
+
 .faq-section {
   padding: 60px 8%;
   background-color: #fff;
@@ -18,11 +45,7 @@ body {
   align-items: flex-start;
 }
 
-.faq-image img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
+
 
 .faq-content {
   flex: 1;
@@ -113,8 +136,16 @@ body {
   color: white;
   font-size: 20px;
 }
-.social-media-footer a:hover {
-  color: #ffcb05;
+.social-media-footer a:hover i.fa-facebook {
+    color: #1717e3;
+}
+
+.social-media-footer  a:hover i.fa-instagram {
+    color: rgb(211, 6, 160);
+}
+
+.social-media-footer  a:hover i.fa-twitter {
+    color: rgb(14, 207, 241);
 }
 
 /* Header Signin/Signup button cleanup */
@@ -128,7 +159,7 @@ body {
   font-weight: 500;
 }
 .btn-link:hover {
-  background-color: #e6b800;
+  background-color: hsl(48, 16%, 31%);
 }
 
 /* Responsive */

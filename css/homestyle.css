@@ -40,6 +40,20 @@ nav a:hover, nav a.active {
   color: #ffcb05;
 }
 
+/* Header Signin/Signup button cleanup */
+.btn-link {
+  background: #ffcb05;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: #0a0a23;
+  text-decoration: none;
+  font-weight: 500;
+}
+.btn-link:hover {
+  background-color: hsl(48, 16%, 31%);
+}
+
 /* Hero */
 .hero {
   position: relative;

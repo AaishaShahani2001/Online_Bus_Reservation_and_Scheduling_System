@@ -35,11 +35,26 @@ nav a:hover, nav a.active {
   color: #ffcb05;
 }
 
+/* Header Signin/Signup button cleanup */
+.btn-link {
+  background: #ffcb05;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: #0a0a23;
+  text-decoration: none;
+  font-weight: 500;
+}
+.btn-link:hover {
+  background-color: hsl(48, 16%, 31%);
+}
+
  .main-content {
   margin-top: 80px; /* or any other value you prefer */
   transition: margin-top 0.5s ease-in-out;
   padding: 20px;
-  height: 100vh;        
+  height: 100vh;  
+       
 }       
 
 .main-content h1 {
