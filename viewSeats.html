@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Bus Seats</title>
+  <link rel="stylesheet" href="css/viewSeats.css" />
+  
+
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const FARE_PER_SEAT = 500;
+      const seats = document.querySelectorAll('.seat');
+      const selectedSeatsInput = document.getElementById('selected-seats');
+      const totalFareElement = document.getElementById('total-fare');
+
+      seats.forEach(seat => {
+        seat.addEventListener('click', () => {
+          seat.classList.toggle('selected');
+          const selected = [...document.querySelectorAll('.seat.selected')].map(seat => seat.dataset.seat);
+          selectedSeatsInput.value = selected.join(',');
+          totalFareElement.textContent = `Total Fare: Rs. ${selected.length * FARE_PER_SEAT}`;
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="logo">TravelWheels</div>
+  <nav>
+    <a href="#" class="active">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contactus.html">Contact Us</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<main>
+  <section class="seats-section">
+    <h2>Select Your Seat(s)</h2>
+    <form action="payment.php" method="POST">
+      <div class="bus-layout">
+        <!-- 7 rows, 4 seats per row (2+2) -->
+        <!-- Repeat this row structure for all rows -->
+        <div class="row">
+          <div class="seat" data-seat="1A">1A</div>
+          <div class="seat" data-seat="1B">1B</div>
+          <div class="space"></div>
+          <div class="seat" data-seat="1C">1C</div>
+          <div class="seat" data-seat="1D">1D</div>
+        </div>
+        <!-- Add remaining rows (2A–7D) below -->
+        <div class="row">
+          <div class="seat" data-seat="2A">2A</div>
+          <div class="seat" data-seat="2B">2B</div>
+          <div class="space"></div>
+          <div class="seat" data-seat="2C">2C</div>
+          <div class="seat" data-seat="2D">2D</div>
+        </div>
+        <div class="row">
+          <div class="seat" data-seat="3A">3A</div>
+          <div class="seat" data-seat="3B">3B</div>
+          <div class="space"></div>
+          <div class="seat" data-seat="3C">3C</div>
+          <div class="seat" data-seat="3D">3D</div>
+        </div>
+        <div class="row">
+          <div class="seat" data-seat="4A">4A</div>
+          <div class="seat" data-seat="4B">4B</div>
+          <div class="space"></div>
+          <div class="seat" data-seat="4C">4C</div>
+          <div class="seat" data-seat="4D">4D</div>
+        </div>
+        <div class="row">
+          <div class="seat" data-seat="5A">5A</div>
+          <div class="seat" data-seat="5B">5B</div>
+          <div class="space"></div>
+          <div class="seat" data-seat="5C">5C</div>
+          <div class="seat" data-seat="5D">5D</div>
+        </div>
+        <div class="row">
+          <div class="seat" data-seat="6A">6A</div>
+          <div class="seat" data-seat="6B">6B</div>
+          <div class="space"></div>
+          <div class="seat" data-seat="6C">6C</div>
+          <div class="seat" data-seat="6D">6D</div>
+        </div>
+        <div class="row">
+          <div class="seat" data-seat="7A">7A</div>
+          <div class="seat" data-seat="7B">7B</div>
+          <div class="space"></div>
+          <div class="seat" data-seat="7C">7C</div>
+          <div class="seat" data-seat="7D">7D</div>
+        </div>
+      </div>
+
+      <!-- Total Fare Display -->
+      <p class="fare-summary" id="total-fare">Total Fare: Rs. 0</p>
+
+      <!-- Hidden input to send seat data -->
+      <input type="hidden" name="selectedSeats" id="selected-seats">
+
+      <button type="submit" class="confirm-button">Confirm Booking</button>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <p>&copy; 2025 TravelWheels. All rights reserved.</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+/* Header */
+header {
+  background: #0a0a23;
+  color: #fff;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a:hover, nav a.active {
+  color: #ffcb05;
+}
+
+.seats-section {
+  padding: 30px;
+  text-align: center;
+}
+
+.bus-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.seat {
+  width: 50px;
+  height: 50px;
+  background-color: #ccc;
+  border-radius: 8px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.seat:hover {
+  background-color: #aaa;
+}
+
+.seat.selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+.seat.space {
+  visibility: hidden;
+  
+}
+
+
+.fare-summary {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 20px 0;
+      color: #003366;
+}
+
+.confirm-button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.confirm-button:hover {
+  background-color: #0059b3;
+}
+
+/* Footer */
+.footer {
+  background-color: #0a0a23;
+  color: #fff;
+  padding: 20px 8%;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.socials a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.socials  a:hover i.fa-facebook {
+    color: #1717e3;
+}
+
+.socials  a:hover i.fa-instagram {
+    color: rgb(211, 6, 160);
+}
+
+.socials a:hover i.fa-twitter {
+    color: rgb(14, 207, 241);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section h1 {
+    font-size: 28px;
+  }
+
+  nav {
+    font-size: 14px;
+  }
+}
