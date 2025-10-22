@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment | TravelWheels</title>
+  <link rel="stylesheet" href="css/payment.css">
+  <link rel="stylesheet" href="css/tw.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/payment.js" defer></script>
+</head>
+<body>
+  <div id="tw-header"></div>
+
+  <main class="pw-container">
+    <h1>Secure Payment</h1>
+
+    <div id="summary" class="pw-card" style="margin-bottom:16px;">
+      <!-- small order summary injected by payment.js -->
+    </div>
+
+    <form id="card-form" class="pw-card">
+      <div class="pw-grid">
+        <label>
+          <span>Cardholder Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Card Number</span>
+          <input type="text" name="number" maxlength="19" placeholder="1111 2222 3333 4444" required>
+        </label>
+        <label>
+          <span>Expiry (MM/YY)</span>
+          <input type="text" name="expiry" maxlength="5" placeholder="08/27" required>
+        </label>
+        <label>
+          <span>CVV</span>
+          <input type="password" name="cvv" maxlength="4" required>
+        </label>
+      </div>
+      <button type="submit" class="pw-btn">Pay Now</button>
+      <a class="pw-btn ghost" href="submitPay.html">Back</a>
+    </form>
+  </main>
+
+  <footer class="pw-footer">© 2025 TravelWheels</footer>
+</body>
+</html>

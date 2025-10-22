@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review & Submit | TravelWheels</title>
+  <link rel="stylesheet" href="css/payment.css">
+  <link rel="stylesheet" href="css/tw.css"><!-- optional if you already use it -->
+  <script src="js/data.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/checkout.js" defer></script>
+</head>
+<body>
+  <div id="tw-header"></div>
+
+  <main class="pw-container">
+    <h1>Review your booking</h1>
+    <div id="order-card" class="pw-card">
+      <!-- filled by checkout.js -->
+    </div>
+
+    <div class="pw-actions">
+      <a href="viewSeats.html" class="pw-btn ghost">Edit seats</a>
+      <button id="proceed" class="pw-btn">Proceed to Payment</button>
+      <button id="cancel" class="pw-btn danger">Cancel</button>
+    </div>
+  </main>
+
+  <footer class="pw-footer">© 2025 TravelWheels</footer>
+</body>
+</html>
